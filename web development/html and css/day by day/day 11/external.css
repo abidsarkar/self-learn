@@ -1,0 +1,12 @@
+.name{
+    background-color: blueviolet;
+    font-size: large;
+    color: chartreuse;
+    text-align: left;
+}
+.info{
+    background-color: rgb(107, 20, 220);
+    font-size: large;
+    color: darkgoldenrod;
+    text-align:center;
+}
