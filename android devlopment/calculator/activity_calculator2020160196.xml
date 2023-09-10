@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Calculator_2020_1_60_196"
+    android:background="#000000"
+    android:padding="4dp"
+    >
+    <!--Relative layout for the tv, Output,delete Button-->
+    <RelativeLayout
+        android:id="@+id/tv_output_delete"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        >
+        <!--Relative layout for the tv-->
+        <RelativeLayout
+            android:id="@+id/one"
+            android:layout_width="match_parent"
+            android:layout_height="120dp">
+
+            <TextView
+                android:id="@+id/tvEquation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right|center_vertical"
+                android:paddingRight="16dp"
+                android:text=""
+                android:textColor="#FFEB3B"
+                android:textSize="30sp" />
+
+        </RelativeLayout>
+        <!--Relative layout for the tv END-->
+        <!--Relative layout for the  Output,delete Button-->
+        <RelativeLayout
+            android:layout_below="@id/one"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            >
+            <!--Linear layout for the  Output,delete Button-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="1dp">
+
+                    <TextView
+                        android:id="@+id/viewOutput"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:background="#444444"
+                        android:gravity="right|center_vertical"
+                        android:textColor="#ffff00"
+                        android:textSize="25sp"
+
+                        />
+                    <!--view end-->
+                </LinearLayout>
+
+                <!--Linear layout for the delete Button-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3">
+
+                    <Button
+                        android:id="@+id/btnDel"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="4dp"
+                        android:backgroundTint="#444444"
+                        android:padding="0dp"
+                        android:text="delete"
+                        android:textColor="#ffff00" />
+                    <!--Button end-->
+                </LinearLayout>
+                <!--Linear layout for the delete Button end-->
+
+            </LinearLayout>
+            <!--Linear layout for the  Output,delete Button end-->
+
+        </RelativeLayout>
+        <!--Relative layout for the  Output,delete Button END-->
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/two"
+        android:layout_below="@id/tv_output_delete"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnCount="3"
+            android:rowCount="1"
+            android:orientation="horizontal"
+            >
+            <Button
+                android:id="@+id/btnleft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill_horizontal"
+                android:text="&lt;"
+                android:textSize="32sp"
+                android:backgroundTint="#444444"
+                android:textColor="#ffff00"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:padding="0dp"
+                />
+            <Button
+                android:id="@+id/btnright"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill_horizontal"
+                android:text=">"
+                android:textSize="32sp"
+                android:backgroundTint="#444444"
+                android:textColor="#ffff00"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:padding="0dp"
+                />
+            <Button
+                android:id="@+id/btnclear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill_horizontal"
+                android:text="clear"
+                android:textSize="23sp"
+                android:backgroundTint="#444444"
+                android:textColor="#ffff00"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:padding="0dp"
+                />
+        </GridLayout>
+
+    </RelativeLayout>
+    <!--Relative layout for the tv, Output,delete Button END-->
+    <!--Relative layout for the number Button-->
+    <!-- layout_below="@id/tv_output_delete"is for output the
+        layout below the tv/output/delete-->
+    <RelativeLayout
+
+        android:layout_below="@id/two"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+
+        <!--star of GridLayout-->
+
+        <GridLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnCount="4"
+            android:rowCount="4"
+            android:orientation="horizontal"
+            >
+            <Button
+                android:id="@+id/btn7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill_horizontal"
+                android:text="7"
+                android:textSize="32sp"
+                android:backgroundTint="#444444"
+                android:textColor="#ffff00"
+                android:layout_marginLeft="4dp"
+                />
+
+            <Button
+                android:id="@+id/btn8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill_horizontal"
+                android:layout_marginLeft="4dp"
+                android:backgroundTint="#444444"
+                android:text="8"
+                android:textSize="32sp"
+                android:textColor="#ffff00"
+                />
+
+            <Button
+                android:id="@+id/btn9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill_horizontal"
+                android:text="9"
+                android:textSize="32sp"
+                android:backgroundTint="#444444"
+                android:textColor="#ffff00"
+                android:layout_marginLeft="4dp"/>
+            <Button
+                android:id="@+id/btnDiv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill_horizontal"
+                android:text="/"
+                android:textSize="32sp"
+                android:backgroundTint="#444444"
+                android:textColor="#ffff00"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"/>
+            <Button
+                android:id="@+id/btn4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill_horizontal"
+                android:text="4"
+                android:textSize="32sp"
+                android:backgroundTint="#444444"
+                android:textColor="#ffff00"
+                android:layout_marginLeft="4dp"
+                />
+            <Button
+                android:id="@+id/btn5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill_horizontal"
+                android:text="5"
+                android:textSize="32sp"
+                android:backgroundTint="#444444"
+                android:textColor="#ffff00"
+                android:layout_marginLeft="4dp"/>
+            <Button
+                android:id="@+id/btn6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill_horizontal"
+                android:text="6"
+                android:textSize="32sp"
+                android:backgroundTint="#444444"
+                android:textColor="#ffff00"
+                android:layout_marginLeft="4dp"/>
+            <Button
+                android:id="@+id/btnMul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill_horizontal"
+                android:text="x"
+                android:textSize="32sp"
+                android:backgroundTint="#444444"
+                android:textColor="#ffff00"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"/>
+            <Button
+                android:id="@+id/btn1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill_horizontal"
+                android:text="1"
+                android:textSize="32sp"
+                android:backgroundTint="#444444"
+                android:textColor="#ffff00"
+                android:layout_marginLeft="4dp"/>
+            <Button
+                android:id="@+id/btn2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill_horizontal"
+                android:text="2"
+                android:textSize="32sp"
+                android:backgroundTint="#444444"
+                android:textColor="#ffff00"
+                android:layout_marginLeft="4dp"/>
+            <Button
+                android:id="@+id/btn3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill_horizontal"
+                android:text="3"
+                android:textSize="32sp"
+                android:backgroundTint="#444444"
+                android:textColor="#ffff00"
+                android:layout_marginLeft="4dp"/>
+            <Button
+                android:id="@+id/btnSub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill_horizontal"
+                android:text="-"
+                android:textSize="32sp"
+                android:backgroundTint="#444444"
+                android:textColor="#ffff00"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"/>
+            <Button
+                android:id="@+id/btnPoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill_horizontal"
+                android:text="."
+                android:textSize="32sp"
+                android:backgroundTint="#444444"
+                android:textColor="#ffff00"
+                android:layout_marginLeft="4dp"/>
+            <Button
+                android:id="@+id/btn0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill_horizontal"
+                android:text="0"
+                android:textSize="32sp"
+                android:backgroundTint="#444444"
+                android:textColor="#ffff00"
+                android:layout_marginLeft="4dp"/>
+            <Button
+                android:id="@+id/btnEqual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill_horizontal"
+                android:text="="
+                android:textSize="32sp"
+                android:backgroundTint="#444444"
+                android:textColor="#ffff00"
+                android:layout_marginLeft="4dp"/>
+            <Button
+                android:id="@+id/btnAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill_horizontal"
+                android:text="+"
+                android:textSize="32sp"
+                android:backgroundTint="#444444"
+                android:textColor="#ffff00"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"/>
+        </GridLayout>
+
+    </RelativeLayout>
+    <!--Relative layout for the number Button END-->
+
+
+</RelativeLayout>
+    <!--Root Relative layout end-->
